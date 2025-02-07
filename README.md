@@ -1,7 +1,22 @@
 # File Manager
 
 ## Overview
-The File Manager project is a back-end service that provides an API for user authentication, file uploads, and file management. Built using modern JavaScript (ES6) and a NoSQL database, this project integrates MongoDB, Redis, Node.js, Express.js, and Kue for background processing.
+File Manager project is a back-end service that provides an API for user authentication, file uploads, and file management. Built using modern JavaScript (ES6) and a NoSQL database, this project integrates MongoDB, Redis, Node.js, Express.js, and Kue for background processing.
+
+This File Manager project acts like a back-end system for storing and managing files. It works similarly to cloud storage services but is designed for controlled access via an API.
+
+## What It Does:
+- User Authentication – Users must sign up and log in to access the system. Authentication is handled via tokens.
+- File Upload & Management – Users can upload files, list their stored files, and change permissions (e.g., making files public or private).
+- Database Storage – Files are stored with metadata (such as user ID, file type, and storage location) in MongoDB.
+- Temporary Storage with Redis – Some frequently accessed or short-lived data is stored in Redis for fast access.
+- Background Processing – When a file is uploaded, background jobs (managed with Kue) handle additional tasks like generating thumbnails for images.
+- Pagination – When retrieving a list of files, the API supports pagination to efficiently handle large datasets.
+
+## Why It's Useful:
+It provides a structured way to store and retrieve files with access control.
+It integrates modern web technologies for scalability.
+Background processing helps in automating tasks like generating image previews.
 
 This project was developed by Satson Johnson as part of a collaborative learning experience, emphasizing authentication, storage, and background task management. The project ran from October 10, 2024, to October 17, 2024, with manual and automatic quality assurance reviews pending.
 
